@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+body {
+    background-color: #181818; 
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Preenche a tela inteira em altura */
+    overflow: hidden; /* overflow controla o que fazer cokm o conteúdo que sai do limite pag */
+}
+
+/* Container principal que mantém o formulário e a imagem */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Largura do container */
+    max-width: 1200px;
+}
+
+
+.formulario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6A0DAD; 
+    text-align: center;
+}
+
+
+.icones-sociais {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.icone {
+    width: 40px;
+    height: 40px;
+}
+
+/* Linha e texto "OR" */
+.ou-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+.linha {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #fff;
+}
+
+.ou-container p {
+    margin: 0 10px;
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #000; 
+    color: #fff; 
+}
+
+input::placeholder {
+    color: #aaa; 
+}
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 50px; /* Faz o botão redondo */
+    background-color: #6A0DAD;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Suave transição ao clicar */
+}
+
+/* Efeito ao clicar no botão */
+button:hover {
+    background-color: #8a2be2; 
+}
+
+button:active {
+    background-color: #7f38ec; 
+}
+
+/* Container da imagem */
+.imagem-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-container img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .formulario-container, .imagem-container {
+        width: 100%;
+    }
+
+    .imagem-container img { 
+        display: none;
+    }
+}
+
+/* Adicionando o círculo cinza no canto */
+.circulo-cinza {
+    position: absolute;
+    top: 250px; /* Ajuste a posição vertical */
+    right: -150px; /* Ajuste a posição horizontal */
+    width: 600px; /* Largura do círculo */
+    height: 600px; /* Altura do círculo */
+    background-color: #A9A9A9; 
+    border-radius: 50%; /* Faz o formato ser um círculo */
+    z-index: -1; /* Coloca o círculo atrás da imagem */
+
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .circulo-cinza {
+        display: none;
+    }
+}
+
